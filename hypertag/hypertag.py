@@ -1,3 +1,8 @@
+if __package__ is None:
+    DIR = Path(__file__).resolve().parent
+    sys.path.insert(0, str(DIR.parent))
+    __package__ = DIR.name
+    
 import os
 import re
 from typing import Set
@@ -10,8 +15,8 @@ import fire  # type: ignore
 from tqdm import tqdm  # type: ignore
 import rpyc  # type: ignore
 from pywebcopy import WebPage, config  # type: ignore
-from hypertag.persistor import Persistor
-from hypertag.graph import graph
+from persistor import Persistor
+from graph import graph
 from utils import remove_dir, remove_symlink, download_url
 from __init__ import __version__
 
