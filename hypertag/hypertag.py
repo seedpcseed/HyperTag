@@ -38,7 +38,7 @@ class HyperTag:
             if len(result) == 0:
                 print("No relevant files indexed...")
         except ConnectionRefusedError:
-            from .vectorizer import CLIPVectorizer
+            from vectorizer import CLIPVectorizer
 
             vectorizer = CLIPVectorizer(cpu, verbose)
             results = vectorizer.search_image(text_query, path, top_k, score)
@@ -54,7 +54,7 @@ class HyperTag:
 
     def index_images(self, rebuild=False):
         """ Vectorize image files (needed for semantic search) """
-        from .vectorizer import CLIPVectorizer, get_image_files
+        from vectorizer import CLIPVectorizer, get_image_files
 
         if rebuild:
             print("Rebuilding images index")
@@ -94,7 +94,7 @@ class HyperTag:
         """ Vectorize text files (needed for semantic search) """
         # TODO: index images
         # TODO: auto index on file addition (import)
-        from .vectorizer import TextVectorizer, extract_clean_text, get_text_documents
+        from vectorizer import TextVectorizer, extract_clean_text, get_text_documents
 
         print("Vectorizing text documents...")
         remote = True
@@ -219,7 +219,7 @@ class HyperTag:
             if len(result) == 0:
                 print("No relevant files indexed...")
         except (ConnectionRefusedError, RuntimeError):
-            from .vectorizer import TextVectorizer
+            from vectorizer import TextVectorizer
 
             vectorizer = TextVectorizer()
             results = vectorizer.search(text_query, path, top_k, score, not _return)
