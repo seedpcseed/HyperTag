@@ -14,9 +14,10 @@ import PyPDF2  # type: ignore
 import textract  # type: ignore
 import wordninja  # type: ignore
 from ftfy import fix_text  # type: ignore
-from .persistor import Persistor
-from .utils import download_url
-from .tokenizer import SimpleTokenizer
+from persistor import Persistor
+from urllib import robotparser
+from utils import download_url
+from tokenizer import SimpleTokenizer
 
 logging.disable(logging.INFO)
 

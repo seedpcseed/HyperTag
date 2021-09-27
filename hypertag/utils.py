@@ -3,6 +3,7 @@ from pathlib import Path
 import os
 from shutil import rmtree
 from tqdm import tqdm  # type: ignore
+from urllib import robotparser
 
 
 class DownloadProgressBar(tqdm):

@@ -1,6 +1,7 @@
 from pathlib import Path
 from igraph import Graph, plot  # type: ignore
 from persistor import Persistor
+from urllib import robotparser
 
 
 def graph(layout="fruchterman_reingold", output=None):

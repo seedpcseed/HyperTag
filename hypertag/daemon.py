@@ -9,6 +9,7 @@ from rpyc.utils.server import ThreadedServer  # type: ignore
 from watchdog.observers import Observer  # type: ignore
 from watchdog.events import FileSystemEventHandler  # type: ignore
 from persistor import Persistor
+from urllib import robotparser
 from vectorizer import TextVectorizer, CLIPVectorizer
 from utils import update_symlink
 
