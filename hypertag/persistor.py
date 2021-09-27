@@ -4,7 +4,7 @@ from typing import List
 from pathlib import Path
 import filetype  # type: ignore
 from fuzzywuzzy import process  # type: ignore
-from .utils import is_int
+from utils import is_int
 
 
 class Persistor:

@@ -8,9 +8,9 @@ import rpyc  # type: ignore
 from rpyc.utils.server import ThreadedServer  # type: ignore
 from watchdog.observers import Observer  # type: ignore
 from watchdog.events import FileSystemEventHandler  # type: ignore
-from .persistor import Persistor
-from .vectorizer import TextVectorizer, CLIPVectorizer
-from .utils import update_symlink
+from persistor import Persistor
+from vectorizer import TextVectorizer, CLIPVectorizer
+from utils import update_symlink
 
 text_vectorizer = None
 image_vectorizer = None

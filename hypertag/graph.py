@@ -1,6 +1,6 @@
 from pathlib import Path
 from igraph import Graph, plot  # type: ignore
-from .persistor import Persistor
+from persistor import Persistor
 
 
 def graph(layout="fruchterman_reingold", output=None):
