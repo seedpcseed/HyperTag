@@ -8,3 +8,15 @@ HyperTagFS/*
 .ipynb_checkpoints/*
 **/__pycache__/**
 migrate.sql
+*.so
+*.0
+*.2
+*.8
+*.1
+*.4
+*.7
+*.5
+*.6
+*.3
+*.pem
+*.zip
